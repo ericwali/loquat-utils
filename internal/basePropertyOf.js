@@ -6,10 +6,10 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /**
- * 不支持深度路径的' propertyOf '的基本实现
+ * 不支持深度路径的 'propertyOf' 的基本实现
  *
  * @param {Object} object要查询的对象
  * @returns {Function} 返回新的访问器函数
