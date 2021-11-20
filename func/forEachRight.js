@@ -6,14 +6,13 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import arrayEachRight from '../internal/arrayEachRight'
 import baseEachRight from '../internal/baseEachRight'
 
 /**
- * 这个方法类似于 'forEach' 除了它遍历的元素
- * 'collection' 从右到左。
+ * 这个方法类似于 'forEach' 除了它遍历的元素 'collection' 从右到左
  *
  * @category Collection
  * @param {Array|Object} collection 要迭代的集合
@@ -22,7 +21,7 @@ import baseEachRight from '../internal/baseEachRight'
  * @example
  *
  * forEachRight([1, 2], value => console.log(value))
- * // => Logs `2` then `1`.
+ * // => Logs '2' then '1'
  */
 function forEachRight (collection, iteratee) {
   const func = Array.isArray(collection) ? arrayEachRight : baseEachRight

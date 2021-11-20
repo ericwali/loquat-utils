@@ -1,15 +1,15 @@
 /**
  * @program: loquat-utils
  *
- * @description: forEach数组迭代函数(右到左)
+ * @description: forEachRight数组迭代函数(右到左)
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /**
- * 数组的' forEachRight '的专门版本
+ * 数组的 'forEachRight' 的专门版本
  *
  * @param {Array} [array] 要迭代的数组
  * @param {Function} iteratee 每次迭代调用的函数
