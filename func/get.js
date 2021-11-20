@@ -11,16 +11,14 @@
 import baseGet from '../internal/baseGet'
 
 /**
- * Gets the value at `path` of `object`. If the resolved value is
- * `undefined`, the `defaultValue` is returned in its place.
+ * 获取 'object' 的 'path' 处的值如果解析值为 'undefined'
+ * 'defaultValue' 在其位置返回
  *
- * @since 3.7.0
  * @category Object
- * @param {Object} object The object to query.
- * @param {Array|string} path The path of the property to get.
- * @param {*} [defaultValue] The value returned for `undefined` resolved values.
- * @returns {*} Returns the resolved value.
- * @see has, hasIn, set, unset
+ * @param {Object} object 要查询的对象
+ * @param {Array|string} path 要获取的属性的路径
+ * @param {*} [defaultValue] 为未定义解析值返回的值
+ * @returns {*} 返回解析值
  * @example
  *
  * const object = { 'a': [{ 'b': { 'c': 3 } }] }
@@ -34,7 +32,7 @@ import baseGet from '../internal/baseGet'
  * get(object, 'a.b.c', 'default')
  * // => 'default'
  */
-function get(object, path, defaultValue) {
+function get (object, path, defaultValue) {
   const result = object == null ? undefined : baseGet(object, path)
   return result === undefined ? defaultValue : result
 }

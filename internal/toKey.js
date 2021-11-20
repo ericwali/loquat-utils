@@ -10,15 +10,14 @@
 
 import isSymbol from '../func/isSymbol'
 
-/** 用作各种“Number”常量的引用。 */
+/** 用作各种 'Number' 常量的引用 */
 const INFINITY = 1 / 0
 
 /**
- * 如果' value '不是字符串或符号，则将其转换为字符串键。
+ * 如果 'value' 不是字符串或符号,则将其转换为字符串键
  *
- * @private
- * @param {*} value需要检查的值。
- * @returns {string|symbol} 返回键。
+ * @param {*} value需要检查的值
+ * @returns {string|symbol} 返回键
  */
 function toKey (value) {
   if (typeof value === 'string' || isSymbol(value)) {

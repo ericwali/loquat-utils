@@ -8,14 +8,13 @@
  * @create: 2021-11-18
  **/
 
-import objectToString from './objectToString'
+const objectToString = Object.prototype.toString
 
 /**
- * 获取value的' toStringTag '。
+ * 获取value的 'toStringTag'
  *
- * @private
- * @param {*}value要查询的值。
- * @returns {string} 返回“toStringTag”。
+ * @param {*}value要查询的值
+ * @returns {string} 返回 'toStringTag'
  */
 function getTag (value) {
   if (value == null) {

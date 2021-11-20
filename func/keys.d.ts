@@ -1,13 +1,13 @@
 /**
- * 获取对象所有属性
- * @param obj 对象
+ * 判断是否是一个基本数据类型
+ * @param val 值
  */
-export declare function keys(obj: any): string[]
+export declare function isSymbol(value: any): value is symbol
 
 declare module './ctor' {
   interface LoquatMethods {
-    keys: typeof keys;
+    isSymbol: typeof isSymbol;
   }
 }
 
-export default keys
+export default isSymbol

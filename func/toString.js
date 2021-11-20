@@ -10,16 +10,16 @@
 
 import isSymbol from './isSymbol'
 
-/** 用作各种“Number”常量的引用. */
+/** 用作各种“Number”常量的引用 */
 const INFINITY = 1 / 0
 
 /**
  * 将' value '转换为字符串。' null '返回一个空字符串
- * 和未定义的值。符号' -0 '被保留。
+ * 和未定义的值。符号' -0 '被保留
  *
  * @category Lang
- * @param {*} value 要转换的值。
- * @returns {string} 返回转换后的字符串。
+ * @param {*} value 要转换的值
+ * @returns {string} 返回转换后的字符串
  * @example
  *
  * toString(null)

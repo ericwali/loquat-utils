@@ -8,13 +8,14 @@
  * @create: 2021-11-18
  **/
 
-import objectToString from './staticObjectToString'
+import getTag from '../internal/getTag'
 
 /**
  * 获取对象类型
  *
+ * @category Lang
  * @param {Object} obj 对象/数组
- * @return {String}
+ * @return {String} 返回定义后的简短类型
  */
 function getObjType (obj) {
   const map = {
@@ -34,7 +35,7 @@ function getObjType (obj) {
   if (obj instanceof Element) {
     return 'element'
   }
-  return map[objectToString.call(obj)]
+  return map[getTag(obj)]
 }
 
 export default getObjType

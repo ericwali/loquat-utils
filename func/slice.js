@@ -9,13 +9,13 @@
  **/
 
 /**
- * 创建一个从' start '到' end '的数组切片，但不包括' end '。
+ * 创建一个从' start '到' end '的数组切片，但不包括' end '
  *
  * @category Array
- * @param {Array} array 要切片的数组。
- * @param {number} [start=0] 一开始的位置。负索引将被视为从末尾开始的偏移量。
- * @param {number} [end=array.length] 最后的位置。负索引将被视为从末尾开始的偏移量。
- * @returns {Array} 返回' array '的切片。
+ * @param {Array} array 要切片的数组
+ * @param {number} [start=0] 一开始的位置。负索引将被视为从末尾开始的偏移量
+ * @param {number} [end=array.length] 最后的位置。负索引将被视为从末尾开始的偏移量
+ * @returns {Array} 返回' array '的切片
  * @example
  *
  * var array = [1, 2, 3, 4]

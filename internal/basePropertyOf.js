@@ -9,11 +9,10 @@
  **/
 
 /**
- * 不支持深度路径的' propertyOf '的基本实现。
+ * 不支持深度路径的' propertyOf '的基本实现
  *
- * @private
- * @param {Object} object要查询的对象。
- * @returns {Function} 返回新的访问器函数。
+ * @param {Object} object要查询的对象
+ * @returns {Function} 返回新的访问器函数
  */
 function basePropertyOf (object) {
   return (key) => object == null ? undefined : object[key]

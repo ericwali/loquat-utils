@@ -1,45 +1,45 @@
-/**
- * @program: loquat-utils
- *
- * @description: 合并对象(深合并)
- *
- * @author: entfrm开发团队-王翔
- *
- * @create: 2021-11-18
- **/
+import eq from './eq'
 
-import isArray from './isArray'
-import isPlainObject from './isPlainObject'
-import each from './each'
+/** Used for built-in method references. */
+const objectProto = Object.prototype
 
-function handleMerge (target, source) {
-  if ((isPlainObject(target) && isPlainObject(source)) || (isArray(target) && isArray(source))) {
-    each(source, function (obj, key) {
-      target[key] = handleMerge(target[key], obj)
-    })
-    return target
-  }
-  return source
-}
+/** Used to check objects for own properties. */
+const hasOwnProperty = objectProto.hasOwnProperty
 
 /**
-  * 将一个或多个源对象合并到目标对象中
-  *
-  * @param {Object} target 目标对象
-  * @param {...Object}
-  * @return {Object}
-  */
-const merge = function (target, ...args) {
-  if (!target) {
-    target = {}
-  }
-  for (let source, index = 1; index < args.length; index++) {
-    source = args[index]
-    if (source) {
-      handleMerge(target, source)
+ * Assigns own and inherited enumerable string keyed properties of source
+ * objects to the destination object for all destination properties that
+ * resolve to `undefined`. Source objects are applied from left to right.
+ * Once a property is set, additional values of the same property are ignored.
+ *
+ * **Note:** This method mutates `object`.
+ *
+ * @since 0.1.0
+ * @category Object
+ * @param {Object} object The destination object.
+ * @param {...Object} [sources] The source objects.
+ * @returns {Object} Returns `object`.
+ * @see defaultsDeep
+ * @example
+ *
+ * assign({ 'a': 1 }, { 'b': 2 }, { 'a': 3 })
+ * // => { 'a': 1, 'b': 2 }
+ */
+function merge (object, ...sources) {
+  object = Object(object)
+  sources.forEach((source) => {
+    if (source != null) {
+      source = Object(source)
+      for (const key in source) {
+        const value = object[key]
+        if (value === undefined ||
+            (eq(value, objectProto[key]) && !hasOwnProperty.call(object, key))) {
+          object[key] = source[key]
+        }
+      }
     }
-  }
-  return target
+  })
+  return object
 }
 
 export default merge

@@ -13,25 +13,24 @@ import memoizeCapped from './memoizeCapped'
 const charCodeOfDot = '.'.charCodeAt(0)
 const reEscapeChar = /\\(\\)?/g
 const rePropName = RegExp(
-  // 匹配任何不是圆点或括号的东西。
+  // 匹配任何不是圆点或括号的东西
   '[^.[\\]]+' + '|' +
-  // 或匹配括号内的属性名。
+  // 或匹配括号内的属性名
   '\\[(?:' +
-    // 匹配一个非字符串表达式。
+    // 匹配一个非字符串表达式
     '([^"\'][^[]*)' + '|' +
-    // 或匹配字符串(支持转义字符)。
+    // 或匹配字符串(支持转义字符)
     '(["\'])((?:(?!\\2)[^\\\\]|\\\\.)*?)\\2' +
   ')\\]' + '|' +
-  // 或者将""匹配为连续的点或空括号之间的空格。
+  // 或者将""匹配为连续的点或空括号之间的空格
   '(?=(?:\\.|\\[\\])(?:\\.|\\[\\]|$))'
   , 'g')
 
 /**
- * 将' string '转换为属性路径数组。
+ * 将 'string' 转换为属性路径数组
  *
- * @private
- * @param {string} string要转换的字符串。
- * @returns {Array} 返回属性路径数组。
+ * @param {string} string要转换的字符串
+ * @returns {Array} 返回属性路径数组
  */
 const stringToPath = memoizeCapped((string) => {
   const result = []

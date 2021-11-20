@@ -1,8 +1,9 @@
 /**
- * 将字符串转换为驼峰大小写。
+ * 将' string '转换为[驼峰大小写](https://en.wikipedia.org/wiki/CamelCase)
  *
- * @param string 要转换的字符串。
- * @return 返回驼峰格式字符串。
+ * @category String
+ * @param {string} [string=''] 要转换的字符串
+ * @returns {string} 返回驼峰格式字符串
  */
 export declare function camelCase(string?: string): string
 

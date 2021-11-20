@@ -10,9 +10,9 @@
 
 import basePropertyOf from './basePropertyOf'
 
-/** 用于映射拉丁Unicode字母到基本拉丁字母。 */
+/** 用于映射拉丁Unicode字母到基本拉丁字母 */
 const deburredLetters = {
-  // Latin-1 补充块.
+  // Latin-1 补充块
   '\xc0': 'A', '\xc1': 'A', '\xc2': 'A', '\xc3': 'A', '\xc4': 'A', '\xc5': 'A',
   '\xe0': 'a', '\xe1': 'a', '\xe2': 'a', '\xe3': 'a', '\xe4': 'a', '\xe5': 'a',
   '\xc7': 'C', '\xe7': 'c',
@@ -30,7 +30,7 @@ const deburredLetters = {
   '\xc6': 'Ae', '\xe6': 'ae',
   '\xde': 'Th', '\xfe': 'th',
   '\xdf': 'ss',
-  // 拉丁语扩展 A 块.
+  // Latin 扩展-A块
   '\u0100': 'A', '\u0102': 'A', '\u0104': 'A',
   '\u0101': 'a', '\u0103': 'a', '\u0105': 'a',
   '\u0106': 'C', '\u0108': 'C', '\u010a': 'C', '\u010c': 'C',
@@ -69,12 +69,11 @@ const deburredLetters = {
 }
 
 /**
- * 被“deburr”用来转换Latin-1 Supplement和Latin Extended-A
- * 字母到基本的拉丁字母。
+ * 被 'deburr' 用来转换Latin-1 补充 和 Latin 扩展-A
+ * 字母到基本的拉丁字母
  *
- * @private
- * @param {string} 匹配的去毛刺的字母。
- * @returns {string} 返回去毛刺的信。
+ * @param {string} 匹配的去毛刺的字母
+ * @returns {string} 返回去毛刺的信
  */
 const deburrLetter = basePropertyOf(deburredLetters)
 

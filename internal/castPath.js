@@ -12,12 +12,11 @@ import isKey from './isKey'
 import stringToPath from './stringToPath'
 
 /**
- * 如果不是路径数组，则将' value '强制转换为路径数组。
+ * 如果不是路径数组,则将 'value' 强制转换为路径数组
  *
- * @private
- * @param {*} value 要检查的值。
- * @param {Object} [object] 要查询键的对象。
- * @returns {Array} 返回强制转换的属性路径数组。
+ * @param {*} value 要检查的值
+ * @param {Object} [object] 要查询键的对象
+ * @returns {Array} 返回强制转换的属性路径数组
  */
 function castPath (value, object) {
   if (Array.isArray(value)) {

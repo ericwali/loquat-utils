@@ -10,10 +10,10 @@
 
 import deburrLetter from '../internal/deburrLetter'
 
-/** 用于匹配拉丁Unicode字母(不包括数学运算符). */
+/** 用于匹配拉丁Unicode字母(不包括数学运算符) */
 const reLatin = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g
 
-/** 用于组成unicode字符类. */
+/** 用于组成unicode字符类 */
 // 结合附加符号
 const rsComboMarksRange = '\\u0300-\\u036f'
 // 组合用半符号
@@ -25,14 +25,13 @@ const rsComboMarksSupplementRange = '\\u1dc0-\\u1dff'
 // 匹配组合符号
 const rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange + rsComboMarksExtendedRange + rsComboMarksSupplementRange
 
-/** 用于组合unicode捕获组. */
+/** 用于组合unicode捕获组 */
 const rsCombo = `[${rsComboRange}]`
 
 /**
- * 用于匹配 [结合变音符号] (https://en.wikipedia.org/wiki/Combining_Diacritical_Marks) and
- * [为符号组合变音符号](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_for_Symbols).
+ * 用于匹配 [结合变音符号] (https://en.wikipedia.org/wiki/Combining_Diacritical_Marks) 和
+ * [为符号组合变音符号](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_for_Symbols)
  */
-
 const reComboMark = RegExp(rsCombo, 'g')
 
 /**
@@ -45,8 +44,9 @@ const reComboMark = RegExp(rsCombo, 'g')
  * 删除说明:删除变音符号
  * 结合变音符号: https://en.wikipedia.org/wiki/Combining_Diacritical_Marks
  *
- * @param {string} [string='']  要去毛刺的字符串.
- * @returns {string} 返回去毛刺的字符串.
+ * @category String
+ * @param {string} [string='']  要去毛刺的字符串
+ * @returns {string} 返回去毛刺的字符串
  * @example
  *
  * deburr('wángxiáng');

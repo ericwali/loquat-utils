@@ -1,13 +1,22 @@
+/**
+ * @program: loquat-utils
+ *
+ * @description: 判断是否需要裁剪数组,如果需要则进行裁剪
+ *
+ * @author: entfrm开发团队-王翔
+ *
+ * @create: 2021-11-18
+ **/
+
 import slice from '../func/slice'
 
 /**
- * 如果需要，将' array '强制转换为slice。
+ * 如果需要,将' array '强制转换为slice
  *
- * @private
- * @param {Array} array 要检查的数组。
- * @param {number} start 一开始的位置。
- * @param {number} [end=array.length] 最后的位置。
- * @returns {Array} 返回强制转换的片。
+ * @param {Array} array 要检查的数组
+ * @param {number} start 一开始的位置
+ * @param {number} [end=array.length] 最后的位置
+ * @returns {Array} 返回强制转换的片
  */
 function castSlice (array, start, end) {
   const { length } = array

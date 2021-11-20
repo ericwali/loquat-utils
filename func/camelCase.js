@@ -13,11 +13,11 @@ import words from './words'
 import toString from './toString'
 
 /**
- * 将' string '转换为[驼峰大小写](https://en.wikipedia.org/wiki/CamelCase).
+ * 将' string '转换为[驼峰大小写](https://en.wikipedia.org/wiki/CamelCase)
  *
  * @category String
- * @param {string} [string=''] 要转换的字符串。
- * @returns {string} 返回驼峰格式字符串。
+ * @param {string} [string=''] 要转换的字符串
+ * @returns {string} 返回驼峰格式字符串
  * @example
  *
  * camelCase('Foo Bar')

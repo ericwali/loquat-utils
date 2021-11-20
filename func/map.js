@@ -1,33 +1,28 @@
 /**
- * @program: loquat-utils
+ * Creates an array of values by running each element of `array` thru `iteratee`.
+ * The iteratee is invoked with three arguments: (value, index, array).
  *
- * @description: 指定方法后的返回值组成的新数组
+ * @since 5.0.0
+ * @category Array
+ * @param {Array} array The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ * @example
  *
- * @author: entfrm开发团队-王翔
+ * function square(n) {
+ *   return n * n
+ * }
  *
- * @create: 2021-11-18
- **/
+ * map([4, 8], square)
+ * // => [16, 64]
+ */
+function map(array, iteratee) {
+  let index = -1
+  const length = array == null ? 0 : array.length
+  const result = new Array(length)
 
-import each from './each'
-
-/**
-  * 指定方法后的返回值组成的新数组
-  *
-  * @param {Object} obj 对象/数组
-  * @param {Function} iterate(item, index, obj) 回调
-  * @param {Object} context 上下文
-  * @return {Array}
-  */
-function map (obj, iterate, context, ...args) {
-  const result = []
-  if (obj && arguments.length > 1) {
-    if (obj.map) {
-      return obj.map(iterate, context)
-    } else {
-      each(obj, function () {
-        result.push(iterate.apply(context, args))
-      })
-    }
+  while (++index < length) {
+    result[index] = iteratee(array[index], index, array)
   }
   return result
 }

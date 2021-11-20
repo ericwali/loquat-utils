@@ -13,7 +13,7 @@ import setupDefaults from './setupDefaults'
 import arrayEach from './arrayEach'
 import isFunction from './isFunction'
 import each from './each'
-import assign from './assign'
+import merge from './assign'
 
 const LoquatUtils = function () {}
 
@@ -34,7 +34,7 @@ function mixin (...args) {
 }
 
 function setup (options) {
-  return assign(setupDefaults, options)
+  return merge(setupDefaults, options)
 }
 
 LoquatUtils.VERSION = '@VERSION'
