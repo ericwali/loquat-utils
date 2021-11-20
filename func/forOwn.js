@@ -6,13 +6,13 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /**
  * 遍历对象和的可枚举字符串键控属性
- * 为每个属性调用 'iteratee' 用3调用迭代对象
- * 参数(value, key, object)迭代函数可能会退出迭代
- * 提前显式返回 'false'
+ * 为每个属性调用 'iteratee'
+ * 调用迭代对象参数(value, key, object)
+ * 迭代函数可能会退出迭代,提前显式返回 'false'
  *
  * @category Object
  * @param {Object} object 要迭代的对象

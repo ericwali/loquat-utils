@@ -6,7 +6,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /**
  * 这个方法类似于 'forOwn' 除了它遍历的属性 'object' 的顺序相反
@@ -27,7 +27,7 @@
  * forOwnRight(new Foo, function(value, key) {
  *   console.log(key)
  * })
- * // => Logs 'b' then 'a' assuming `forOwn` logs 'a' then 'b'.
+ * // => Logs 'b' then 'a' assuming `forOwn` logs 'a' then 'b'
  */
 function forOwnRight (object, iteratee) {
   if (object == null) {
