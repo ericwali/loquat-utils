@@ -1,12 +1,12 @@
 /**
  * @program: loquat-utils
  *
- * @description: 获取对象值
+ * @description: 获取对象路径处的属性值,如果解析的值未定义,则使用defaultValue代替它
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import baseGet from '../internal/baseGet'
 

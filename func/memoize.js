@@ -9,21 +9,20 @@
  */
 
 /**
- * 创建一个函数来记忆' func '的结果。如果“解析器”
- * 方法确定用于存储结果的缓存键
- * 提供给记忆函数的参数。默认情况下，第一个参数
- * 提供给记忆函数，用作映射缓存键。“函数”
- * 是通过记忆函数的“this”绑定调用的。
+ * 创建一个函数来记忆 'func' 的结果
+ * 如果 'resolver' 方法确定用于存储结果的缓存键
+ * 提供给记忆函数的参数,默认情况下,第一个参数
+ * 提供给记忆函数,用作映射缓存键
+ * 'func' 是通过记忆函数的 'this' 绑定调用的
  *
- * 注意:缓存是作为memoized的' cache '属性暴露的
- * 函数。其创建可以通过替换 `memoize.Cache`
- * 构造函数的实例实现
- * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
- * 方法接口 of `clear`, `delete`, `get`, `has`, and `set`.
+ * 注意:缓存是作为memoized的 'cache' 属性暴露的函数
+ * 其创建可以通过替换 'memoize.Cache'
+ * 构造函数的实例实现[Map](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * 方法接口有 'clear','delete','get','has','set'
  *
- * @param {Function} 函数的输出被记下来。
- * @param {Function} [resolver] 解析缓存键的函数。
- * @returns {Function} Returns 新的记忆函数。
+ * @param {Function} 函数的输出被记下来
+ * @param {Function} [resolver] 解析缓存键的函数
+ * @returns {Function} Returns 新的记忆函数
  * @example
  *
  * const object = { 'a': 1, 'b': 2 }

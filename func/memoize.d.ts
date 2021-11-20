@@ -1,53 +1,53 @@
-/**
- * 创建缓存记忆函数
- * @param {Function} fn 函数的输出被记下来。
- * @param {Function} [resolver] 解析缓存键的函数。
- */
-
-/** 缓存函数 **/
-interface MemoizedFunction extends Function {
-  cache: MapCache;
-}
-
 /** 缓存Map **/
 interface MapCache {
   /**
-   * Removes `key` and its value from the cache.
-   * @param key The key of the value to remove.
-   * @return Returns `true` if the entry was removed successfully, else `false`.
+   * 从缓存中移除 'key' 及其值
+   * @param key 要删除的值的键
+   * @return 如果成功删除条目,则返回 'true' 否则返回 'false'
    */
-  delete(key: string): boolean;
-
+  delete(key: any): boolean;
   /**
-   * Gets the cached value for `key`.
-   * @param key The key of the value to get.
-   * @return Returns the cached value.
+   * 获取 'key' 的缓存值
+   * @param key 要获取的值的键
+   * @return 返回缓存的值
    */
-  get(key: string): any;
-
+  get(key: any): any;
   /**
-   * Checks if a cached value for `key` exists.
-   * @param key The key of the entry to check.
-   * @return Returns `true` if an entry for `key` exists, else `false`.
+   * 检查 'key' 是否存在缓存值
+   * @param key 要检查的key
+   * @return 如果存在key条目,则返回 'true' 否则返回 'false'
    */
-  has(key: string): boolean;
-
+  has(key: any): boolean;
   /**
-   * Sets `value` to `key` of the cache.
-   * @param key The key of the value to cache.
-   * @param value The value to cache.
-   * @return Returns the cache object.
+   * 设置 'value' 到 'key' 的缓存
+   * @param key 要缓存的值的键
+   * @param value 要缓存的值
+   * @return 返回缓存对象
    */
-  set(key: string, value: any): any;
+  set(key: any, value: any): this;
+  /**
+   * 从映射中删除所有键值项
+   */
+  clear?: () => void;
 }
 
-export declare function memoize<T extends Function>(func: T, resolver?: Function): T & MemoizedFunction
+export declare function memoize <T extends (...args: any[]) => any>(func: T, resolver?: (...args: any[]) => any): T & { cache: MapCache }
 
+/**
+ * 创建一个函数来记忆func的结果,如果提供了解析器,它将确定缓存键
+ * 根据提供给记忆函数的参数存储结果,默认情况下,第一个参数
+ * 提供给memoized函数的被强制转换为字符串并用作缓存键
+ * 调用func记忆功能的这种绑定
+ *
+ * @param func 使其输出被记忆的函数
+ * @param resolver 解析缓存键的函数
+ * @return 返回新的记忆函数
+ */
 declare module './ctor' {
   interface LoquatMethods {
     memoize: {
-      <T extends Function>(func: T, resolver?: Function): T & MemoizedFunction;
-      Cache: MapCache;
+      <T extends (...args: any[]) => any>(func: T, resolver?: (...args: any[]) => any): T & { cache: MapCache };
+      Cache: { new (): MapCache };
     };
   }
 }

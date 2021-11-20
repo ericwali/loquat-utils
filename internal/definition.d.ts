@@ -21,6 +21,6 @@ export interface ObjectIterator<T, TResult> {
     (element: T, key?: string, collection?: any): TResult;
 }
 
-interface StringRepresentable {
-    toString(): string;
+export interface NumericDictionary<T> {
+    [index: number]: T;
 }
