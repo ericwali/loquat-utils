@@ -6,7 +6,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import getTag from '../internal/getTag'
 
@@ -14,7 +14,7 @@ import getTag from '../internal/getTag'
  * 获取对象类型
  *
  * @category Lang
- * @param {Object} obj 对象/数组
+ * @param {*} obj 检查的对象
  * @return {String} 返回定义后的简短类型
  */
 function getObjType (obj) {
