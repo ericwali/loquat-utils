@@ -13,7 +13,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /** 用于组合unicode字符类 */
 // 匹配代理对(高半区): https://cloud.tencent.com/developer/article/1641938
@@ -38,10 +38,10 @@ const rsZWJ = '\\u200d'
 const reHasUnicode = RegExp(`[${rsZWJ + rsAstralRange + rsComboRange + rsVarRange}]`)
 
 /**
- * 检查' string '是否包含Unicode符号
+ * 检查 'string' 是否包含Unicode符号
  *
  * @param {string} string 要检查的字符串
- * @returns {boolean} 如果找到符号则返回' true ',否则返回' false '
+ * @returns {boolean} 如果找到符号则返回 'true' 否则返回 'false'
  */
 function hasUnicode (string) {
   return reHasUnicode.test(string)

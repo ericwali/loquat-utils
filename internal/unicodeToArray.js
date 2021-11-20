@@ -13,7 +13,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /** 用于组合unicode字符类 */
 // 匹配代理对(高半区): https://cloud.tencent.com/developer/article/1641938
@@ -53,7 +53,7 @@ const rsSymbol = `(?:${[rsNonAstralCombo, rsCombo, rsRegional, rsSurrPair, rsAst
 const reUnicode = RegExp(`${rsFitz}(?=${rsFitz})|${rsSymbol + rsSeq}`, 'g')
 
 /**
- * 将Unicode ' string '转换为数组
+ * 将Unicode 'string' 转换为数组
  *
  * @param {string} string 要转换的字符串
  * @returns {Array} 返回转换后的数组

@@ -1,12 +1,12 @@
 /**
  * @program: loquat-utils
  *
- * @description: 分词器
+ * @description: 字符串分词器
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import unicodeWords from '../internal/unicodeWords'
 
@@ -23,7 +23,7 @@ function asciiWords (string) {
 }
 
 /**
- * 将' string '拆分为单词数组
+ * 将 'string' 拆分为单词数组
  *
  * @category String
  * @param {string} [string=''] 要检查的字符串

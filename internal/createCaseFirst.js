@@ -6,7 +6,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import castSlice from './castSlice'
 import hasUnicode from './hasUnicode'

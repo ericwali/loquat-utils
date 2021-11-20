@@ -13,9 +13,9 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
-/** 用于组成unicode字符类. */
+/** 用于组成unicode字符类 */
 // 匹配代理对(高半区): https://cloud.tencent.com/developer/article/1641938
 const rsAstralRange = '\\ud800-\\udfff'
 // 结合附加符号
@@ -47,7 +47,7 @@ const rsVarRange = '\\ufe0e\\ufe0f'
 // 定义分割字符,可以使用(数学运算符,除了字母数字外的符号,常用标点符号,空白)分割
 const rsBreakRange = rsMathOpRange + rsNonCharRange + rsPunctuationRange + rsSpaceRange
 
-/** 用于组合unicode捕获组. */
+/** 用于组合unicode捕获组 */
 // 匹配单引号跟右单引号('’)
 const rsApos = "['\u2019]"
 const rsBreak = `[${rsBreakRange}]`
@@ -70,7 +70,7 @@ const rsUpper = `[${rsUpperRange}]`
 // 匹配零宽度连接符: https://www.emojiall.com/zh-hans/help-emoji-zwj-sequences
 const rsZWJ = '\\u200d'
 
-/** 用于组合unicode正则表达式。 */
+/** 用于组合unicode正则表达式 */
 const rsMiscLower = `(?:${rsLower}|${rsMisc})`
 const rsMiscUpper = `(?:${rsUpper}|${rsMisc})`
 // 反对以'(d|ll|m|re|s|t|ve)的字母出现0次或1次不被拆分(d'd=>["d'd"])
@@ -100,11 +100,10 @@ const reUnicodeWords = RegExp([
 ].join('|'), 'g')
 
 /**
- * 将Unicode ' string '拆分为包含其单词的数组。
+ * 将Unicode 'string' 拆分为包含其单词的数组
  *
- * @private
- * @param {string} 要检查的字符串。
- * @returns {Array} 返回' string '的单词。
+ * @param {string} 要检查的字符串
+ * @returns {Array} 返回 'string' 的单词
  */
 function unicodeWords (string) {
   return string.match(reUnicodeWords)

@@ -1,7 +1,7 @@
 /**
  * @program: loquat-utils
  *
- * @description: 将值转化为String
+ * @description: 将值转为字符串
  *
  * @author: entfrm开发团队-王翔
  *
@@ -10,12 +10,12 @@
 
 import isSymbol from './isSymbol'
 
-/** 用作各种“Number”常量的引用 */
+/** 用作各种 'Number' 常量的引用 */
 const INFINITY = 1 / 0
 
 /**
- * 将' value '转换为字符串。' null '返回一个空字符串
- * 和未定义的值。符号' -0 '被保留
+ * 将 'value' 转换为字符串 'null' 返回一个空字符串
+ * 和未定义的值符号 '-0' 被保留
  *
  * @category Lang
  * @param {*} value 要转换的值
