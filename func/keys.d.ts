@@ -1,13 +1,17 @@
 /**
- * 判断是否是一个基本数据类型
- * @param val 值
+ * 创建对象的可枚举属性名称的数组
+ *
+ * 注意: 将非对象值强制转换为对象。更多细节请参阅ES规范
+ *
+ * @param object 要查询的对象
+ * @return 返回属性名数组
  */
-export declare function isSymbol(value: any): value is symbol
+export declare function keys(object?: any): string[]
 
 declare module './ctor' {
   interface LoquatMethods {
-    isSymbol: typeof isSymbol;
+    keys: typeof keys;
   }
 }
 
-export default isSymbol
+export default keys

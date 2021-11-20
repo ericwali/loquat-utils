@@ -1,12 +1,12 @@
 /**
  * @program: loquat-utils
  *
- * @description: 判断是否是一个有效的类,数组索引
+ * @description: 检查是否是一个有效的数组索引
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /** 用作各种 'Number' 常量的引用 */
 const MAX_SAFE_INTEGER = 9007199254740991
@@ -15,7 +15,7 @@ const MAX_SAFE_INTEGER = 9007199254740991
 const reIsUint = /^(?:0|[1-9]\d*)$/
 
 /**
- * 检查 'value' 是否是一个有效的类,数组索引
+ * 检查 'value' 是否是一个有效的数组索引
  *
  * @param {*} value 要检查的值
  * @param {number} [length=MAX_SAFE_INTEGER] 有效索引的上界

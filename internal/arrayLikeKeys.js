@@ -1,12 +1,12 @@
 /**
  * @program: loquat-utils
  *
- * @description: 创建一个由 'object' 的可枚举属性名组成的数组
+ * @description: 创建对象的可枚举属性名称的数组
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import isArguments from '../func/isArguments'
 import isBuffer from '../func/isBuffer'
@@ -38,9 +38,9 @@ function arrayLikeKeys (value, inherited) {
   for (const key in value) {
     if ((inherited || hasOwnProperty.call(value, key)) &&
         !(skipIndexes && (
-        // Safari 9 has enumerable `arguments.length` in strict mode.
+        // Safari 9有可枚举的参数,长度的严格模式
           (key === 'length' ||
-           // Skip index properties.
+           // 跳过索引属性
            isIndex(key, length))
         ))) {
       result.push(key)

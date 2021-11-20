@@ -7,7 +7,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /** 检测空闲Node.js变量 'global' */
 import freeGlobal from './freeGlobal'

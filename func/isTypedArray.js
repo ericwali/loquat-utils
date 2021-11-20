@@ -1,7 +1,7 @@
 /**
  * @program: loquat-utils
  *
- * @description: 判断是否是一个类型化数组
+ * @description: 检查是否是一个类型化数组
  *
  * @author: entfrm开发团队-王翔
  *

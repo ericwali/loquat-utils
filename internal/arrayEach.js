@@ -6,10 +6,10 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /**
- * 数组的' forEach '的专门版本
+ * 数组的 'forEach' 的专门版本
  *
  * @param {Array} [array] 要迭代的数组
  * @param {Function} iteratee 每次迭代调用的函数

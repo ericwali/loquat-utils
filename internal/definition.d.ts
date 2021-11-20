@@ -17,14 +17,6 @@ export interface ListIterator<T, TResult> {
     (value: T, index: number, collection: List<T>): TResult;
 }
 
-export interface Dictionary<T> {
-    [index: string]: T;
-}
-
-export interface DictionaryIterator<T, TResult> {
-    (value: T, key?: string, collection?: Dictionary<T>): TResult;
-}
-
 export interface ObjectIterator<T, TResult> {
     (element: T, key?: string, collection?: any): TResult;
 }

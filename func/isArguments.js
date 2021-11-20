@@ -1,12 +1,12 @@
 /**
  * @program: loquat-utils
  *
- * @description: 判断是否是一个参数对象
+ * @description: 检查是否是一个参数对象
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import getTag from '../internal/getTag'
 import isObjectLike from './isObjectLike'

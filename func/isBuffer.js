@@ -1,12 +1,12 @@
 /**
  * @program: loquat-utils
  *
- * @description: 判断是否是一个缓冲区
+ * @description: 检查是否是一个缓冲区
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import root from '../internal/root'
 

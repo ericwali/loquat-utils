@@ -6,7 +6,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import isLength from './isLength'
 
@@ -17,7 +17,7 @@ import isLength from './isLength'
  *
  * @category Lang
  * @param {*} value 要检查的值
- * @returns {boolean} 如果 'value' 是数组类,则返回 'true' 否则返回 'false'
+ * @returns {boolean} 如果 'value' 是有效数组,则返回 'true' 否则返回 'false'
  * @example
  *
  * isArrayLike([1, 2, 3])

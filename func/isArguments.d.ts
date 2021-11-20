@@ -1,11 +1,10 @@
 /**
- * 判断是否是一个参数对象
+ * 检查value是否被分类为参数对象
  *
- * @category Lang
- * @param {*} value 要检查的值
- * @returns {boolean} 如果 'value' 是参数对象则返回 'true' 否则返回 'false'
+ * @param value 要检查的值
+ * @return 如果值被正确分类,则返回true,否则返回false
  */
-export declare function isArguments(value: any): value is IArguments
+export declare function isArguments(value?: any): value is IArguments
 
 declare module './ctor' {
   interface LoquatMethods {
