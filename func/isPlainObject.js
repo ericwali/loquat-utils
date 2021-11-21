@@ -1,14 +1,24 @@
-import getTag from './.internal/getTag.js'
-import isObjectLike from './isObjectLike.js'
+/**
+ * @program: loquat-utils
+ *
+ * @description: 检查是否是一个普通对象
+ *
+ * @author: entfrm开发团队-王翔
+ *
+ * @create: 2021-11-18
+ */
+
+import getTag from '../internal/getTag'
+import isObjectLike from './isObjectLike'
 
 /**
- * Checks if `value` is a plain object, that is, an object created by the
- * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ * 检查value是否为普通对象,即由object构造函数创建的对象或[[Prototype]]为空的对象
  *
- * @since 0.8.0
+ * 注意: 此方法假定Object构造函数创建的对象没有继承的可枚举属性
+ *
  * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @param {*} value 要检查的值
+ * @returns {boolean} 如果 'value' 是普通对象,则返回 'true' 否则返回 'false'
  * @example
  *
  * function Foo() {
@@ -27,8 +37,8 @@ import isObjectLike from './isObjectLike.js'
  * isPlainObject(Object.create(null))
  * // => true
  */
-function isPlainObject(value) {
-  if (!isObjectLike(value) || getTag(value) != '[object Object]') {
+function isPlainObject (value) {
+  if (!isObjectLike(value) || getTag(value) !== '[object Object]') {
     return false
   }
   if (Object.getPrototypeOf(value) === null) {

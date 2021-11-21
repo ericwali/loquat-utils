@@ -1,7 +1,7 @@
 /**
  * @program: loquat-utils
  *
- * @description: 判断是否是一个DOM元素
+ * @description: 检查是否是一个DOM元素
  *
  * @author: entfrm开发团队-王翔
  *
