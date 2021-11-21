@@ -1,11 +1,10 @@
 /**
- * 判断是否是一个日期
+ * 检查value是否被分类为Date对象
  *
- * @category Lang
- * @param {*} value 要检查的值
- * @returns {boolean} 如果 'value' 是日期对象,则返回 'true' 否则返回 'false'
+ * @param value 要检查的值
+ * @return 如果值被正确分类,则返回 'true' 否则返回 'false'
  */
-export declare function isDate(value: any): value is Date
+export declare function isDate(value?: any): value is Date
 
 declare module './ctor' {
   interface LoquatMethods {
