@@ -6,7 +6,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import isArrayLike from './isArrayLike.js'
 import isObjectLike from './isObjectLike.js'
