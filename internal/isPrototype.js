@@ -6,7 +6,7 @@
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 /** 用于内置方法引用 */
 const objectProto = Object.prototype
