@@ -1,10 +1,19 @@
 /**
- * Checks if `value` is `undefined`.
+ * @program: loquat-utils
  *
- * @since 0.1.0
+ * @description: 检查是否是一个undefined的语言类型
+ *
+ * @author: entfrm开发团队-王翔
+ *
+ * @create: 2021-11-18
+ */
+
+/**
+ * 检查 'value' 是否为 'undefined'
+ *
  * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
+ * @param {*} value 要检查的值
+ * @returns {boolean} 如果 'value 为 'undefined' 则返回 'true' 否则返回 'false'
  * @example
  *
  * isUndefined(void 0)
@@ -13,7 +22,7 @@
  * isUndefined(null)
  * // => false
  */
-function isUndefined(value) {
+function isUndefined (value) {
   return value === undefined
 }
 
