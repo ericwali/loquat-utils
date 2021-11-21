@@ -1,5 +1,5 @@
 /**
- * 检查 'value' 是否被分类为 'WeakMap对象
+ * 检查 'value' 是否被分类为 'WeakMap' 对象
  *
  * @param value 要检查的值
  * @returns 如果值被正确分类,则返回 'true' 否则返回 'false'
