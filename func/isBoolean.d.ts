@@ -1,16 +1,15 @@
 /**
- * 判断是否是一个有效的对象与有效的数组
+ * 检查value是否被分类为布尔原语或对象
  *
- * @category Lang
- * @param {*} value 要检查的值
- * @returns {boolean} 如果 'value' 是一个类数组对象,则返回 'true' 否 'false'
+ * @param value 要检查的值
+ * @return 如果值被正确分类,则返回 'true' 否则返回 'false'
  */
-export declare function isArrayLikeObject(value: any): boolean
+export declare function isBoolean(value?: any): value is boolean
 
 declare module './ctor' {
   interface LoquatMethods {
-    isArrayLikeObject: typeof isArrayLikeObject;
+    isBoolean: typeof isBoolean;
   }
 }
 
-export default isArrayLikeObject
+export default isBoolean

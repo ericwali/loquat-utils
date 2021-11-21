@@ -1,12 +1,12 @@
 /**
  * @program: loquat-utils
  *
- * @description: 判断是否是一个布尔
+ * @description: 检查是否是一个布尔
  *
  * @author: entfrm开发团队-王翔
  *
  * @create: 2021-11-18
- **/
+ */
 
 import getTag from '../internal/getTag'
 import isObjectLike from './isObjectLike'
@@ -26,8 +26,7 @@ import isObjectLike from './isObjectLike'
  * // => false
  */
 function isBoolean (value) {
-  return value === true || value === false ||
-    (isObjectLike(value) && getTag(value) == '[object Boolean]')
+  return value === true || value === false || (isObjectLike(value) && getTag(value) === '[object Boolean]')
 }
 
 export default isBoolean
