@@ -13,11 +13,11 @@ import isBuffer from '../func/isBuffer'
 import isIndex from './isIndex'
 import isTypedArray from '../func/isTypedArray'
 
-/** 用于检查对象本身的属性. */
+/** 用于检查对象本身的属性 */
 const hasOwnProperty = Object.prototype.hasOwnProperty
 
 /**
- * 创建一个数组，其中包含数组类' value '的可枚举属性名。
+ * 创建一个数组,其中包含数组类 'value' 的可枚举属性名
  *
  * @param {*} value 要查询的值
  * @param {boolean} inherited 指定返回继承的属性名
